@@ -49,9 +49,9 @@ def plot_kmeans():
     print(year)
     plot_indsc, plot_map = Kmean_Olympics(engine,year)
     game_name = f"{city_names[year]}, {year}"
-    plot_indsc.write_html(f"static/images/clustering-{year}.html")
+    plot_indsc.write_html(f"clustering-{year}.html")
     # return redirect('/', code=302)
-    plot_map.write_html(f"static/images/map-{year}.html")
+    plot_map.write_html(f"smap-{year}.html")
     return render_template("index.html", years=year, game_name=game_name)
     
 if __name__=='__main__':
